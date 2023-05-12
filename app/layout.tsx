@@ -1,4 +1,5 @@
 import NavLink from './nav-link'
+import './globals.css'
 
 export const metadata = {
   title: 'Next.js',
@@ -13,13 +14,15 @@ export default function RootLayout({
   console.log('teste?')
 
   return (
-    <html lang='en'>
+    <html lang='en' className='bg-gray-800 text-gray-100'>
       <body>
-        <nav>
-          <NavLink href='/'>Home</NavLink>
-          <NavLink href='/dashboard'>Dashboard</NavLink>
-        </nav>
-        {children}
+        <header className='border-b p-4'>
+          <nav className='space-x-4'>
+            <NavLink href='/'>Home</NavLink>
+            <NavLink href='/dashboard'>Dashboard</NavLink>
+          </nav>
+        </header>
+        <main className='p-4'>{children}</main>
       </body>
     </html>
   )
