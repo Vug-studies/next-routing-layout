@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import NavLink from './nav-link'
 
 export const metadata = {
   title: 'Next.js',
@@ -10,12 +10,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  console.log('teste?')
+
   return (
     <html lang='en'>
       <body>
         <nav>
-          <Link href='/'>Home</Link>
-          <Link href='/dashboard'>Dashboard</Link>
+          <NavLink href='/'>Home</NavLink>
+          <NavLink href='/dashboard'>Dashboard</NavLink>
         </nav>
         {children}
       </body>
